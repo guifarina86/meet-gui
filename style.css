@@ -1,35 +1,127 @@
 body {
   background-color: white;
+  font-size: 1rem;
 }
 
+h1 {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.8em;
+}
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-left: 1em;
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1em;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
 .container {
-  width: 33%;
-  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding: 2em 0;
+}
+
+.container-column {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
 }
 
+.citation {
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+.box13 {
+  background-color: aqua;
+  display: grid;
+  width: 100%;
+  grid-template-areas:
+    "sub sub sub"
+    "col1 col2 col3";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr fit-content;
+}
+
+.box113 {
+  background-color: aqua;
+  display: grid;
+  width: 100%;
+  grid-template-areas: 
+                      "sub sub sub"
+                      "para para para"
+                      "col1 col2 col3";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.child113-sub {
+  grid-area: sub;
+}
+
+.child113-para {
+  grid-area: para; 
+}
+
+.child113-col1 {
+  grid-area: col1;
+}
+
+.child113-col2 {
+  grid-area: col2;
+}
+
+.child113-col3 {
+  grid-area: col3;
+}
+
+/* Responsiveness */
+/* Mobile xs */
 @media (max-width: 576px) {
-  
+  body {
+    background-color: white;
+    font-size: 0.7rem;
+  }
 }
 
+/* Mobile s */
 @media (min-width: 577px) and (max-width: 768px) {
-  
+  body {
+    background-color: red;
+    font-size: 0.8rem;
+  }
 }
 
+/* Tablet */
 @media (min-width: 769px) and (max-width: 992px) {
-  
+  body {
+    background-color: green;
+    font-size: 0.9rem;
+  }
 }
 
-@media (min-width: 993px) and (max-width: 1200px) {
-  
-}
-
-@media (min-width: 1201px) and (max-width: 1400px) {
-  
-}
-
-@media (min-width: 1401px) {
-  
+/* Everything else (default behavior) */
+@media (min-width: 993px) {
+  body {
+    background-color: blue;
+  }
 }
