@@ -10,40 +10,69 @@ h1 {
 
 h2 {
   font-family: 'Arial', sans-serif;
-  font-size: 1.1em;
+  font-size: 1.5em;
   font-weight: bold;
-  padding-left: 1em;
+  margin: 0;
 }
 
 p {
   font-family: 'Arial', sans-serif;
   font-size: 1.1em;
+  text-align: justify;
+  margin: 0;
+  padding-bottom: 1em;
 }
 
 ul {
-  list-style: none;
   font-size: 1.2em;
-  text-align: center;
-  padding: 0;
+  padding: 0 1.2em;
+  list-style-type: disc;
+}
+
+li {
+  width: 100%;
 }
 
 img {
   display: block;
-  margin: auto;
+  margin: 0;
 }
+
 .container {
   display: flex;
   flex-flow: row nowrap;
-  width: 100%;
+  margin: 0 auto;
+  height: 400px;
   padding: 2em 0;
+  gap: 2em;
 }
 
-.container-column {
-  width: 100%;
+.xs {
+  padding: 2em 0 0 0;
+  height: fit-content;
+}
+
+.p {
+  padding-top: 1em;
+}
+
+.xs > p {
+  padding: 0;
+}
+
+.item {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  width: 100%;
+}
+
+.item-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .citation {
@@ -51,48 +80,6 @@ img {
   font-size: 1.1em;
 }
 
-.box13 {
-  background-color: aqua;
-  display: grid;
-  width: 100%;
-  grid-template-areas:
-    "sub sub sub"
-    "col1 col2 col3";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr fit-content;
-}
-
-.box113 {
-  background-color: aqua;
-  display: grid;
-  width: 100%;
-  grid-template-areas: 
-                      "sub sub sub"
-                      "para para para"
-                      "col1 col2 col3";
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.child113-sub {
-  grid-area: sub;
-}
-
-.child113-para {
-  grid-area: para; 
-}
-
-.child113-col1 {
-  grid-area: col1;
-}
-
-.child113-col2 {
-  grid-area: col2;
-}
-
-.child113-col3 {
-  grid-area: col3;
-}
 
 /* Responsiveness */
 /* Mobile xs */
@@ -100,6 +87,15 @@ img {
   body {
     background-color: white;
     font-size: 0.7rem;
+  }
+  ul {
+    font-size: 1.1em;
+  }
+  .container {
+    width: 434px;
+  }
+  .imgshow {
+    width: 130px;
   }
 }
 
@@ -109,6 +105,21 @@ img {
     background-color: red;
     font-size: 0.8rem;
   }
+
+  ul {
+    font-size: 1.1em;
+  }
+
+  .container {
+    width: 579px;
+  }
+  
+  .container-xs {
+    width: 579px;
+  }
+  .imgshow {
+    width: 180px;
+  }
 }
 
 /* Tablet */
@@ -117,11 +128,33 @@ img {
     background-color: green;
     font-size: 0.9rem;
   }
+
+  .container {
+    width: 771px;
+  }
+
+  .container-xs {
+    width: 771px;
+  }
+  .imgshow {
+    width: 250px;
+  }
 }
 
 /* Everything else (default behavior) */
 @media (min-width: 993px) {
   body {
     background-color: blue;
+  }
+
+  .container {
+    width: 992px;
+  }
+
+  .container-xs {
+    width: 992px;
+  }
+  .imgshow {
+    width: 320px;
   }
 }
