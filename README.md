@@ -8,10 +8,21 @@ The goal of this project is to create a personal website that showcases my skill
 <ul>
   <li>
     <p>
+      Change date: <b>05/01/2024</b> <br/>
+      Change(s) made: <br/>
+      -updated section <em>'about'</em>;
+      -updated section <em>'skills'</em>;
+      -updated section <em>'experience'</em>;
+      -updated section <em>'interests'</em>;
+      -updated section <em>'contact'</em>.
+    </p>
+  </li>
+  <li>
+    <p>
       Change date: <b>04/01/2024</b> <br/>
       Change(s) made: <br/>
       -updated section <em>'welcome'</em>;
-      -updated section <em>'about'.
+      -updated section <em>'about'</em>.
     </p>
   </li>
   <li>
